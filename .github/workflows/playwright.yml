@@ -37,7 +37,10 @@ jobs:
       - name: Run Playwright test suite
         run: |
           mkdir -p reports
-          pytest --browser chromium --headless \
+          pytest --browser chromium \
+                 --screenshot only-on-failure \
+                 --video retain-on-failure \
+                 --output test-results \
                  --html=reports/report.html \
                  --self-contained-html \
                  -v
