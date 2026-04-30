@@ -18,7 +18,6 @@ class DashboardPage:
         )
 
         # ── Task cards ────────────────────────────────────────────────────────
-        self.task_cards = page.locator("div, article, li")
         self.task_card_by_name = lambda task_name: (page.get_by_role("heading", name=task_name).locator(".."))
 
     def navigate_to_project(self, project_name: str):
