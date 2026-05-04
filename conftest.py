@@ -18,6 +18,7 @@ PASSWORD = os.getenv("APP_PASSWORD")
 def browser_context_args(browser_context_args):
     """Global browser context settings."""
     return {
+
         **browser_context_args,
         "viewport": {"width": 1280, "height": 800},
     }
