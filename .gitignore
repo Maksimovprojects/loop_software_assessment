@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+*.egg-info/
+.idea/
+.DS_Store
+
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Pytest / test reports
+.pytest_cache/
+reports/
+report.html
+
+# Playwright
+test-results/
+playwright-report/

@@ -1,0 +1,10 @@
+certifi==2026.4.22
+charset-normalizer==3.4.7
+iniconfig==2.3.0
+playwright==1.58.0
+pytest==9.0.3
+pytest-base-url==2.1.0
+pytest-html==4.2.0
+pytest-metadata==3.1.1
+pytest-playwright==0.7.2
+python-slugify==8.0.4
