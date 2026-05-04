@@ -3,14 +3,16 @@ import logging
 from playwright.sync_api import Page, Browser, BrowserContext
 from tests.pages.login_page import LoginPage
 from tests.pages.dashboard_page import DashboardPage
+import os
+from dotenv import load_dotenv
 
-
+load_dotenv()
 logger = logging.getLogger(__name__)
 
 # ── Credentials ──────────────────────────────────────────────────────────────
-USERNAME = "admin"
-PASSWORD = "password123"
-
+APP_URL = os.getenv("APP_URL")
+USERNAME = os.getenv("APP_USERNAME")
+PASSWORD = os.getenv("APP_PASSWORD")
 
 @pytest.fixture(scope="session")
 def browser_context_args(browser_context_args):

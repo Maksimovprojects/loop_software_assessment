@@ -13,6 +13,9 @@ venv/
 .venv/
 env/
 
+# Credentials setup
+.env
+
 # Pytest / test reports
 .pytest_cache/
 reports/
