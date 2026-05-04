@@ -20,7 +20,9 @@ class DashboardPage:
 
     def navigate_to_project(self, project_name: str):
         logger.info(f"Navigating to project: '{project_name}'")
-        self.sidebar_nav.get_by_role("heading", name=project_name).click()
+        heading = self.sidebar_nav.get_by_role("heading", name=project_name)
+        heading.wait_for(state="visible")
+        heading.click()
         self.page.wait_for_load_state("networkidle")
         logger.info(f"Project '{project_name}' loaded")
 
